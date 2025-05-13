@@ -13,6 +13,6 @@ namespace ToDoList.Bll.Services
         Task<GetAllResponseModel> GetCompletedAsync(int skip, int take);
         Task<GetAllResponseModel> GetIncompleteAsync(int skip, int take);
         Task<ICollection<ToDoItemGetDto>> GetSearchedToDoItemAsync(string keyword);
-        Task<int> GetTotalCountAsync();
+        //Task<int> GetTotalCountAsync();
     }
 }

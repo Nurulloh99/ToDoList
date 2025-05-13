@@ -15,9 +15,9 @@ public class ToDoListCountHeaderFilter : IAsyncResultFilter
 
     public async Task OnResultExecutionAsync(ResultExecutingContext context, ResultExecutionDelegate next)
     {
-        var totalCount = await _toDoItemService.GetTotalCountAsync();
+        //var totalCount = await _toDoItemService.GetTotalCountAsync();
 
-        context.HttpContext.Response.Headers.Add("X-Total-Count", totalCount.ToString());
+        //context.HttpContext.Response.Headers.Add("X-Total-Count", totalCount.ToString());
 
         await next();
     }

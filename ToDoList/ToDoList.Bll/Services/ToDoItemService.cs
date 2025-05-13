@@ -156,11 +156,11 @@ namespace ToDoList.Bll.Services
         }
 
 
-        public async Task<int> GetTotalCountAsync()
-        {
-            var userId = _httpContextAccessor.HttpContext?.User?.FindFirst("UserId")?.Value;   // JWT tokendan userId ni oldik
-            return await _toDoItemRepository.SelectTotalCountAsync(Int64.Parse(userId!));
-        }
+        //public async Task<int> GetTotalCountAsync()
+        //{
+        //    var userId = _httpContextAccessor.HttpContext?.User?.FindFirst("UserId")?.Value;   // JWT tokendan userId ni oldik
+        //    return await _toDoItemRepository.SelectTotalCountAsync(Int64.Parse(userId!));
+        //}
 
 
         public async Task UpdateToDoItemAsync(ToDoItemUpdateDto newItem)
